@@ -1,0 +1,16 @@
+.today-web-view-home {
+  text-align: center;
+  font-size: 24px;
+}
+
+.today-web-view-home-tagline {
+  font-size: 32px;
+}
+
+.today-web-view-home-access {
+  margin-top: 40px;
+}
+
+.today-web-view-home-image img {
+  max-height: 500px;
+}
