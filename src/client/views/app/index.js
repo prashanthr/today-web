@@ -6,8 +6,6 @@ import './index.css'
 const App = () => (
   <Layout>
     <AppLayout>
-      <div className='today-web-app-container'>
-      </div>
     </AppLayout>
   </Layout>
 )

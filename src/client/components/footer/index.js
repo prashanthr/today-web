@@ -1,37 +1,39 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Text from '../text'
-const { getHomeFilePath, CONFIG_FILE_NAME } = require('../../util/file')
-const Link = require('ink-link')
-const CONSTANTS = require('../../constants')
-const { author } = require('../../../package.json')
-const colors = require('../../util/colors')
+import Link from '../link'
+import config from '../../config'
 import './index.css'
 
-const Attribution = ({ sources, colors }) => (
-	<Text className='today-web-text-primary'>
+const author = config.author
+
+const Attribution = ({ sources }) => (
+	<Text color='primary'>
 		{sources.map(({ type, name, url }, index) => (
-			<Text className='today-web-text-primary' key={index}>
-				{type} from <Link url={url}><Text className='text-secondary'>{name}</Text></Link>
-				{index !== sources.length - 1 && <>,&nbsp;</>}
-			</Text>
+			<>
+				<Text className='primary' key={index}>
+					{type} from <Link href={url}><Text color='secondary'>{name}</Text></Link>
+				</Text>
+				<br />
+			</>
 		))}
-		{'\n'}
-		Made with 💙 by <Link url={author.url}>{author.name}</Link>.
+		<br />
+		Made with 💙 by <Link href={author.url}>{author.name}</Link>
 	</Text>
 )
 
-const ConfigNotice = () => (
-	<Text className='text-config'>
-		Note: You can view/edit your settings at <Text color={colors.secondary}>{getHomeFilePath(CONFIG_FILE_NAME)}</Text>
-	</Text>
-)
+Attribution.propTypes = {
+	sources: PropTypes.array
+}
 
-const Footer = ({ colors }) => (
+Attribution.defaultProps = {
+	sources: []
+}
+
+const Footer = () => (
 	<div className='today-web-footer'>
-		<ConfigNotice colors={colors} />
-		<Attribution sources={CONSTANTS.attribution} colors={colors} />
+		<Attribution sources={config.attribution.sources} />
 	</div>
 )
 
-module.exports = Footer
+export default Footer
