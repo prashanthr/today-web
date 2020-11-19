@@ -4,7 +4,7 @@ import './index.css'
 
 const Logo = () => (
   <div className='today-web-logo'>
-    <img src={LogoImg} />
+    <img src={LogoImg} alt='logo' />
   </div>
 )
 

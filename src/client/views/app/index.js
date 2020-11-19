@@ -3,11 +3,10 @@ import Layout from '../layout'
 import AppLayout from './layout'
 import './index.css'
 
-const App = ({ }) => (
+const App = () => (
   <Layout>
     <AppLayout>
       <div className='today-web-app-container'>
-        Hola
       </div>
     </AppLayout>
   </Layout>

@@ -14,7 +14,7 @@ const Home = () => (
         </Text>
       </div>
       <div className='today-web-view-home-image'>
-        <img src={screenshot} />
+        <img src={screenshot} alt='screenshot' />
       </div>
       <div className='today-web-view-home-access'>
         <Text>Available on <Link href='/app' isInternal>web</Link> or <Link href='https://npmjs.org/package/@universal-apps/today'>cli</Link></Text>
