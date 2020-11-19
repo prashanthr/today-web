@@ -1,7 +1,7 @@
 :root {
   --today-web-primary-color: white;
   --today-web-secondary-color: #E6767A;
-  --today-web-tertiary-color: darkgreen;
+  --today-web-tertiary-color: #3E214F;
   --today-web-error-color: red;
   --today-web-link-color: #E6767A;
   --today-web-link-hover-color: white;
@@ -15,7 +15,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #3E214F;
+  background-color: #282c34;
+  
   color: white;
 }
 
@@ -39,12 +40,14 @@ body {
   color: var(--today-web-link-color)
 }
 
-a a:visited {
-  color: var(--today-web-link-color)
+a, a:visited, a:-webkit-any-link {
+  color: var(--today-web-link-color);
+  text-decoration: none;
 }
 
 a:hover {
-  color: var(--today-web-link-hover-color)
+  color: var(--today-web-link-hover-color);
+  text-decoration: underline;
 }
 
 .content {
