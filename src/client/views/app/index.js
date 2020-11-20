@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Layout from '../layout'
 import AppLayout from './layout'
 import { getData, buildInitialState } from '../../api'
@@ -13,6 +14,14 @@ const App = () => {
       </AppLayout>
     </Layout>
   )
+}
+
+App.propTypes = {
+
+}
+
+App.defaultProps = {
+
 }
 
 export default App
