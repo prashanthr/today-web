@@ -1,3 +1,5 @@
+import { debug } from './debug'
+
 export const toHumanReadableDate = (
 	date,
 	options = {
@@ -9,4 +11,9 @@ export const toHumanReadableDate = (
  	return new Intl.DateTimeFormat('en-US', options).format(date)
 }
 
-export const getTimeZone = () => Intl.DateTimeFormat().resolvedOptions().timeZone
+export const getTimeZone = () => {
+	const result = Intl.DateTimeFormat().resolvedOptions().timeZone
+	debug('getTimeZone', result)
+	return result
+}
+

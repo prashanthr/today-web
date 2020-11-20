@@ -1,4 +1,16 @@
-const config = {
+import { isProd } from '../util/env'
+
+const defaultConfig = {
+  baseUrl: 'http://localhost:8088',
+  debug: true,
+  logErrorsToConsole: true,
+  app: {
+    defaults: {
+      weatherUnit: 'imperial',
+      historyLimit: 3,
+      newsLimit: 5
+    }
+  },
   author: {
     name: "Prashanth R.",
     url: "https://github.com/prashanthr"
@@ -23,5 +35,18 @@ const config = {
     }]
   }
 }
+
+const prodConfig = {
+  baseUrl: 'https://today-api.universal-apps.xyz',
+  debug: false,
+  logErrorsToConsole: true
+}
+
+const config = isProd() 
+  ? {
+      ...defaultConfig,
+      ...prodConfig
+    }
+  : defaultConfig
 
 export default config

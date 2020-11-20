@@ -10,14 +10,14 @@ const author = config.author
 const Attribution = ({ sources }) => (
 	<Text color='primary'>
 		{sources.map(({ type, name, url }, index) => (
-			<>
+			<React.Fragment key={index}>
 				<Text className='primary' key={index}>
 					{type} from <Link href={url}><Text color='secondary'>{name}</Text></Link>
 				</Text>
-				<br />
-			</>
+				{index !== sources.length - 1 && <>,&nbsp;</>}
+			</React.Fragment>
 		))}
-		<br />
+		<br /><br />
 		Made with 💙 by <Link href={author.url}>{author.name}</Link>
 	</Text>
 )
