@@ -1,6 +1,5 @@
 import axios from 'axios'
-import { get, isNil, omit, isEqual, isEmpty, omitBy, mapValues } from 'lodash'
-import { getLocationFromIp, getLocationFromTZ } from '../util/location'
+import { get } from 'lodash'
 import { debug } from '../util/debug'
 import config from '../config'
 

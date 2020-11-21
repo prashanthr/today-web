@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import Text from '../text'
 import Heading from '../heading'
 import LinkItem from '../link-item'
-import { toHumanReadableDate } from '../../util/datetime'
-import { capitalizeText } from '../../util/text'
 
 const HistoryItems = ({ items, title }) => {
 	return (
@@ -23,6 +21,11 @@ const HistoryItems = ({ items, title }) => {
 	)
 }
 
+HistoryItems.propTypes = {
+	items: PropTypes.array,
+	title: PropTypes.string
+}
+
 const History = ({ data }) => {
 	return (
 		<>
@@ -38,6 +41,10 @@ const History = ({ data }) => {
 			)}
 		</>
 	)
+}
+
+History.propTypes = {
+	data: PropTypes.object
 }
 
 export default History

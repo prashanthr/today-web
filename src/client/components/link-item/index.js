@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Text from '../text'
 import Link from '../link'
 
-const LinkItem = ({ title, url, linkText, colors }) => (
+const LinkItem = ({ title, url, linkText }) => (
 	<>
 		<Text color='primary'>
 			{title}&nbsp;
@@ -17,5 +17,11 @@ const LinkItem = ({ title, url, linkText, colors }) => (
 		</Text>
 	</>
 )
+
+LinkItem.propTypes = {
+	title: PropTypes.string,
+	url: PropTypes.string,
+	linkText: PropTypes.string
+}
 
 export default LinkItem

@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Text from '../text'
 import Heading from '../heading'
-import Link from '../link'
 import LinkItem from '../link-item'
 
 const News = ({ data }) => (
@@ -23,6 +21,7 @@ const News = ({ data }) => (
 )
 
 News.defaultProps = {
+	data: PropTypes.object
 }
 
 

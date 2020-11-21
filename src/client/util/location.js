@@ -48,17 +48,3 @@ export const getLocationFromIp = async () => {
   debug('getLocationFromIp', result)
   return result
 }
-
-export const getLocationGracefully = async () => {
-  return getLocationFromTZ()
-  let location
-  try {
-    location = await getLocationFromIp()
-  } catch (err) {
-    logErrorToConsole('Error getting location from IP', err.message)
-    location = getLocationFromTZ()
-  } finally {
-    debug('getLocationGracefully', location)
-    return location
-  }
-}

@@ -1,14 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Text from '../text'
+import './index.css'
 
 const Quote = ({ data, colors }) => (
 	<>
 		{data && (
 			<div>
-				<Text color={'primary'}>
-					"{data.quote}" - <Text color={'secondary'}>{data.author}</Text>
-				</Text>
+				<blockquote>
+					<p>
+						<Text color={'primary'}>
+							"{data.quote}" - <Text color={'secondary'}>{data.author}</Text>
+						</Text>
+					</p>
+				</blockquote>
 			</div>
 		)}
 	</>

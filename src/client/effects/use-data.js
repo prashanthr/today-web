@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { getData, buildInitialState  } from '../api'
 import config from '../config'
 import { getClientInfo } from '../util/client-info'
-import { debug } from '../util/debug'
 
 const appDefaults = config.app.defaults
 

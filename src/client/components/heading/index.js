@@ -8,4 +8,8 @@ const Heading = ({ text }) => (
 	</Text>
 )
 
+Heading.propTypes = {
+	text: PropTypes.string
+}
+
 export default Heading
