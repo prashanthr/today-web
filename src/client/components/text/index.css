@@ -5,3 +5,7 @@
 .today-web-text-bold {
   font-weight: bold;
 }
+
+.today-web-text-underline {
+  text-decoration: underline;
+}

@@ -3,12 +3,18 @@ import PropTypes from 'prop-types'
 import Intro from '../../../components/intro'
 import Footer from '../../../components/footer'
 import Weather from '../../../components/weather'
+import News from '../../../components/news'
+import History from '../../../components/history'
+import Quote from '../../../components/quote'
 import './index.css'
 
 const AppLayout = ({ data, children }) => {
   const components = [
     <Intro data={data.name} />,
     <Weather data={data.wod} />,
+    <News data={data.nod} />,
+    <History data={data.hod} />,
+    <Quote data={data.qod} />,
     <Footer />
   ]
   return (
