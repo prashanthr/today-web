@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getData, buildInitialState  } from '../api'
 import config from '../config'
-import { getCountry, getLocationGracefully } from '../util/location'
+import { getClientInfo } from '../util/client-info'
 import { debug } from '../util/debug'
 
 const appDefaults = config.app.defaults
@@ -10,13 +10,13 @@ export const useData = ({ initData }) => {
   const [data, setData] = useState(buildInitialState(initData));
 	useEffect(() => {
     const fetchData = async (props) => {
-			const result = await getData({
+      const clientInfo = await getClientInfo()
+      const result = await getData({
         ...props,
-        weatherUnit: 'imperial',
-        historyLimit: 3,
-        newsLimit: 5,
-        country: getCountry(),
-        location: await getLocationGracefully()
+        weatherUnit: appDefaults.weatherUnit,
+        historyLimit: appDefaults.historyLimit,
+        newsLimit: appDefaults.newsLimit,
+        ...clientInfo
       })
 			setData(result)
     };

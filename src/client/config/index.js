@@ -4,7 +4,11 @@ const defaultConfig = {
   baseUrl: 'http://localhost:8088',
   debug: true,
   logErrorsToConsole: true,
+  ipUrl: "https://ipinfo.io/json",
   app: {
+    cache: {
+      ttl: 43200 // 12 hrs
+    },
     defaults: {
       weatherUnit: 'imperial',
       historyLimit: 3,

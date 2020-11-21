@@ -15,7 +15,6 @@ export const getCityFromTZ = () => {
 export const getCityFromIp = async () => {
   let city
 	try {
-    // todo: fix url
 		const res = await axios.get('https://ipinfo.io')
 		city = res.data.city.toLowerCase()
 	} catch (err) {
