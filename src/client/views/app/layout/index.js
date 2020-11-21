@@ -15,7 +15,7 @@ const AppLayout = ({ data, children }) => {
     { animateClassName: 'animate__animated animate__fadeInLeft animate__delay-3s', component: <News data={data.nod} />},
     { animateClassName: 'animate__animated animate__fadeInRight animate__delay-4s', component: <History data={data.hod} />},
     { animateClassName: 'animate__animated animate__fadeInLeftBig animate__delay-5s', component: <Quote data={data.qod} />},
-    { animateClassName: 'animate__animated animate__fadeInLeft animate__delay-6s', component: <Footer />}
+    { animateClassName: 'animate__animated animate__fadeInLeft animate__delay-5s', component: <Footer />}
   ]
   return (
     <>
