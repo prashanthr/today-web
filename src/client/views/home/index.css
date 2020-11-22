@@ -16,11 +16,15 @@
 .today-web-view-home-description {
   min-height: 300px;
   margin-top: 10%;
-  font-size: 24px;
+  font-size: 28px;
   margin-left: 20%;
   margin-right: 20%;
   text-align: left;
   line-height: 1.6;
+}
+
+.today-web-view-home-description p {
+  color: var(--today-web-secondary-color);
 }
 
 .today-web-view-home-description ul {

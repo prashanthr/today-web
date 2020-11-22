@@ -14,12 +14,12 @@ const Home = () => (
         </Text>
       </div>
       <div className='today-web-view-home-description'>
-          <p>At a glance</p>
+          <p className='animate__animated animate__fadeInLeftBig'>At a glance</p>
           <ul>
-            <li>- Weather forecast <Emoji symbol={'☀️'} alt='weather' /></li>
-            <li>- Top headlines <Emoji symbol={'🗞'} alt='news' /></li>
-            <li>- Historical notes <Emoji symbol={'🎓'} alt='mortarboard' /></li>
-            <li>- Daily inspirational quote <Emoji symbol={'✨'} alt='spark' /></li>
+            <li className='animate__animated animate__fadeInLeft animate__delay-1s'>- Weather forecast <Emoji symbol={'☀️'} alt='weather' /></li>
+            <li className='animate__animated animate__fadeInLeft animate__delay-2s'>- Top headlines <Emoji symbol={'🗞'} alt='news' /></li>
+            <li className='animate__animated animate__fadeInLeft animate__delay-3s'>- Historical notes <Emoji symbol={'🎓'} alt='mortarboard' /></li>
+            <li className='animate__animated animate__fadeInLeft animate__delay-4s'>- Daily inspirational quote <Emoji symbol={'✨'} alt='spark' /></li>
           </ul>
       </div>
       <div className='today-web-view-home-access'>
