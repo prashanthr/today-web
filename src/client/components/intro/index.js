@@ -9,11 +9,10 @@ const Intro = ({ name, colors }) => (
 		{name && (
 			<>
 				<Text color='primary'>
-						Hello, <Text className='today-web-text-bold' color='secondary'>{capitalizeText(name)}</Text> 👋
-						{'\n'}
+						Hello, <Text color='secondary'>{capitalizeText(name)}</Text> 👋
 				</Text>
 				<Text color='primary'>
-					Today is <Text className='today-web-text-bold' color='secondary'>{toHumanReadableDate(new Date())}</Text>
+					Today is <Text color='secondary'>{toHumanReadableDate(new Date())}</Text>
 				</Text>
 			</>
 		)}

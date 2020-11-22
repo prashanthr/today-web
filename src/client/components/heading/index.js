@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Text from '../text'
 
 const Heading = ({ text }) => (
-	<Text color={'primary'} bold underline>
+	<Text color={'secondary'} bold>
 		{text}
 	</Text>
 )
