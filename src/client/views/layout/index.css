@@ -47,7 +47,8 @@ a, a:visited, a:-webkit-any-link {
 
 a:hover {
   color: var(--today-web-link-hover-color);
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  border-bottom: 1px dashed white;
 }
 
 .content {

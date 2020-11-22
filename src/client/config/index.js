@@ -1,10 +1,11 @@
 import { isProd } from '../util/env'
 
 const defaultConfig = {
-  baseUrl: 'http://localhost:8088',
   debug: true,
   logErrorsToConsole: true,
+  baseUrl: 'http://localhost:8088',
   ipUrl: "https://ipinfo.io/json",
+  coffeeUrl: "https://www.buymeacoffee.com/TGuwXOA",
   app: {
     cache: {
       ttl: 43200 // 12 hrs

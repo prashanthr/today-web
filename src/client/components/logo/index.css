@@ -13,3 +13,7 @@
     position: absolute;
   }
 }
+
+.today-web-logo a:hover {
+  border: none;
+}

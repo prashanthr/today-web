@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../layout'
 import Text from '../../components/text'
 import Link from '../../components/link'
-import screenshot from '../../assets/logo.svg'
+import { Emoji } from '@universal-apps/swan-react'
 import './index.css'
 
 const Home = () => (
@@ -16,10 +16,10 @@ const Home = () => (
       <div className='today-web-view-home-description'>
           <p>At a glance</p>
           <ul>
-            <li>- Weather forecast ☀️</li>
-            <li>- Top headlines 🗞</li>
-            <li>- Historical notes 🎓</li>
-            <li>- Daily inspirational quote ✨</li>
+            <li>- Weather forecast <Emoji symbol={'☀️'} alt='weather' /></li>
+            <li>- Top headlines <Emoji symbol={'🗞'} alt='news' /></li>
+            <li>- Historical notes <Emoji symbol={'🎓'} alt='mortarboard' /></li>
+            <li>- Daily inspirational quote <Emoji symbol={'✨'} alt='spark' /></li>
           </ul>
       </div>
       <div className='today-web-view-home-access'>
