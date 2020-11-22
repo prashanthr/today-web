@@ -13,8 +13,14 @@ const Home = () => (
           Welcome to <Text color='secondary'>today</Text>. A unique experience for the current day.
         </Text>
       </div>
-      <div className='today-web-view-home-image'>
-        <img src={screenshot} alt='screenshot' />
+      <div className='today-web-view-home-description'>
+          <p>At a glance</p>
+          <ul>
+            <li>- Weather forecast ☀️</li>
+            <li>- Top headlines 🗞</li>
+            <li>- Historical notes 🎓</li>
+            <li>- Daily inspirational quote ✨</li>
+          </ul>
       </div>
       <div className='today-web-view-home-access'>
         <Text>Available on <Link href='/app' isInternal>web</Link> or <Link href='https://npmjs.org/package/@universal-apps/today'>cli</Link></Text>
