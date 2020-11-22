@@ -6,6 +6,7 @@ const defaultConfig = {
   baseUrl: 'http://localhost:8088',
   ipUrl: "https://ipinfo.io/json",
   coffeeUrl: "https://www.buymeacoffee.com/TGuwXOA",
+  todayCliPkgUrl: "https://npmjs.org/package/@universal-apps/today",
   app: {
     cache: {
       ttl: 43200 // 12 hrs

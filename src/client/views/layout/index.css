@@ -54,3 +54,14 @@ a:hover {
 .content {
   margin-top: 7%;
 }
+
+.today-web-view-page {
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  font-size: 24px;
+}
+
+.today-web-view-tagline {
+  font-size: 32px;
+}
