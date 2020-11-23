@@ -11,8 +11,8 @@ const initialState = {
 
 export const buildInitialState = (data) => {
 	return {
-		...data,
-		...initialState
+		...initialState,
+		...data
 	}
 }
 
