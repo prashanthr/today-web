@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import Text from '../text'
 import { toHumanReadableDate } from '../../util/datetime'
 import { capitalizeText } from '../../util/text'
+import { sample } from 'lodash'
 
-const Intro = ({ name, colors }) => (
+const Intro = ({ name }) => (
 	<>
 		{name && (
 			<>
@@ -20,8 +21,7 @@ const Intro = ({ name, colors }) => (
 )
 
 Intro.defaultProps = {
-	name: 'Stranger',
-	colors: {}
+	name: sample(['Stranger', 'Human', 'Earther', 'Earthling', 'Strange Being']),
 }
 
 Intro.propTypes = {
