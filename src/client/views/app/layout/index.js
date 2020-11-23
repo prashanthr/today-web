@@ -6,11 +6,13 @@ import Weather from '../../../components/weather'
 import News from '../../../components/news'
 import History from '../../../components/history'
 import Quote from '../../../components/quote'
+import Error from '../../../components/error'
 import './index.css'
 
 const AppLayout = ({ data, children }) => {
   const components = [
     { animateClassName: 'animate__animated animate__fadeInLeft',  component: <Intro data={data.name} />},
+    ...(data.error ? [{ animateClassName: '', component: <Error message={data.errorMessage} />}] : []),
     { animateClassName: 'animate__animated animate__flipInX animate__delay-2s', component: <Weather data={data.wod} />},
     { animateClassName: 'animate__animated animate__fadeInLeft animate__delay-3s', component: <News data={data.nod} />},
     { animateClassName: 'animate__animated animate__fadeInRight animate__delay-4s', component: <History data={data.hod} />},
