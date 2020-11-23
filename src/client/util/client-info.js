@@ -5,14 +5,14 @@ import { getCountry, getLocationFromTZ } from './location'
 import config from '../config'
 /**
  * {
-  "ip": "52.119.119.173",
-  "hostname": "52-119-119-173.public.monkeybrains.net",
+  "ip": "10.22.34.175",
+  "hostname": "10.22.34.175.public.comcast.net",
   "city": "San Francisco",
   "region": "California",
   "country": "US",
-  "loc": "37.7749,-122.4194",
-  "org": "AS32329 Monkey Brains",
-  "postal": "94103",
+  "loc": "32.7142,-102.7056",
+  "org": "Comcast Inc",
+  "postal": "94005",
   "timezone": "America/Los_Angeles",
   "readme": "https://ipinfo.io/missingauth"
  }  
