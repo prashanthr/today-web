@@ -18,7 +18,9 @@ export const getCityFromIp = async () => {
 		const res = await axios.get('https://ipinfo.io')
 		city = res.data.city.toLowerCase()
 	} catch (err) {
-    logErrorToConsole('Error getting ip address', err)
+    const errMsg = 'Error getting ip address'
+    logErrorToConsole(errMsg, err.message)
+    debug(errMsg, err)
 	} finally {
     debug('cityFromIp', city)
 		return city

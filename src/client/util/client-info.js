@@ -40,8 +40,9 @@ export const getClientInfo = async () => {
       }
     }
   } catch(err) {
-    logErrorToConsole('Error getting client data', err.message)
-    debug('Error getting client data', err)
+    const errMsg = 'Error getting client data'
+    logErrorToConsole(errMsg, err.message)
+    debug(errMsg, err)
     data = {
       ...data,
       country: defaultCountry,
