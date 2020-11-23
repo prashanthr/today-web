@@ -23,10 +23,10 @@ const AppLayout = ({ data, children }) => {
     <>
       <div className='today-web-app-layout-container'>
         <div className='today-web-app-container'>
-          {components.map((component, idx) => (
+          {components.map((cmp, idx) => (
             <React.Fragment key={idx}>
-              <div className={`today-web-app-component ${component.animateClassName}`}>
-                {component.component}
+              <div className={`today-web-app-component ${cmp.animateClassName}`}>
+                {cmp.component}
               </div>
             </React.Fragment>
           ))}
