@@ -3,7 +3,7 @@ import { isProd } from '../util/env'
 const defaultConfig = {
   debug: true,
   logErrorsToConsole: true,
-  baseUrl: 'http://localhost:8088',
+  apiBaseUrl: 'http://localhost:8088',
   ipUrl: "https://ipinfo.io/json",
   coffeeUrl: "https://www.buymeacoffee.com/TGuwXOA",
   todayCliPkgUrl: "https://npmjs.org/package/@universal-apps/today",
@@ -43,7 +43,7 @@ const defaultConfig = {
 }
 
 const prodConfig = {
-  baseUrl: 'https://today-api.universal-apps.xyz',
+  apiBaseUrl: 'https://today-api.universal-apps.xyz',
   debug: false,
   logErrorsToConsole: true
 }

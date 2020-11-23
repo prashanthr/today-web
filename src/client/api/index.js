@@ -18,8 +18,7 @@ export const buildInitialState = (data) => {
 
 const getDataUrl = (params) => {
 	const { weatherUnit, historyLimit, newsLimit, country, location } = params
-  // return `${config.baseUrl}/health`
-  return `${config.baseUrl}/today?location=${encodeURIComponent(location)}&country=${country}&wod_unit=${weatherUnit}&hod_limit=${historyLimit}&nod_limit=${newsLimit}`
+  return `${config.apiBaseUrl}/today?location=${encodeURIComponent(location)}&country=${country}&wod_unit=${weatherUnit}&hod_limit=${historyLimit}&nod_limit=${newsLimit}`
 }
 
 export const getData = async (params) => {
