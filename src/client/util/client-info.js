@@ -36,7 +36,7 @@ export const getClientInfo = async () => {
     } else {
       data = {
         ...data,
-        ...cachedClientInfo
+        ...cachedClientInfo,
         country: defaultCountry,
         location: `${cachedClientInfo.city},${defaultCountry}`
       }
