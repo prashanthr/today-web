@@ -43,16 +43,12 @@ const defaultConfig = {
 }
 
 const prodConfig = {
+  ...defaultConfig,
   apiBaseUrl: 'https://today-api.universal-apps.xyz',
   debug: false,
   logErrorsToConsole: true
 }
 
-const config = isProd() 
-  ? {
-      ...defaultConfig,
-      ...prodConfig
-    }
-  : defaultConfig
+const config = isProd() ? prodConfig : defaultConfig
 
 export default config
