@@ -1,14 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../layout'
 import AppLayout from './layout'
 import './index.css'
 import { useData } from '../../effects/use-data'
+import { buildInitialState } from '../../api'
 
 const App = () => {
-  const data = useData({})
+  const [effectData, setEffectData] = useState(buildInitialState({}))
+  let appData = useData({ initData: effectData })
+  const onDataHookChange = ({ key, value }) => {
+    switch (key) {
+      default:
+        console.log('onDataHookChange', key, value)
+        setEffectData({ 
+          ...effectData,
+          forceUpdate: true,
+          [key]: value
+        })
+    }
+  }
   return (
     <Layout>
-      <AppLayout data={data}>
+      <AppLayout data={appData} onDataHookChange={onDataHookChange}>
       </AppLayout>
     </Layout>
   )

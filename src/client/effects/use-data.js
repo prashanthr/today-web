@@ -2,19 +2,20 @@ import { useEffect, useState } from 'react'
 import { getData, buildInitialState  } from '../api'
 import config from '../config'
 import { getClientInfo } from '../util/client-info'
+import { get } from 'lodash'
 
 const appDefaults = config.app.defaults
 
 export const useData = ({ initData }) => {
-  const [data, setData] = useState(buildInitialState(initData));
+  const [data, setData] = useState(initData);
 	useEffect(() => {
     const fetchData = async (props) => {
       const clientInfo = await getClientInfo()
       const result = await getData({
         ...props,
-        weatherUnit: appDefaults.weatherUnit,
-        historyLimit: appDefaults.historyLimit,
-        newsLimit: appDefaults.newsLimit,
+        weatherUnit: get(initData, 'weatherUnit', appDefaults.weatherUnit),
+        historyLimit: get(initData, 'historyLimit', appDefaults.historyLimit),
+        newsLimit: get(initData, 'newsLimit', appDefaults.newsLimit),
         ...clientInfo
       })
 			setData(result)
