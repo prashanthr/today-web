@@ -13,7 +13,7 @@ const AppLayout = ({ data, onDataHookChange, children }) => {
   const components = [
     { animateClassName: 'animate__animated animate__fadeInLeft',  component: <Intro data={data.name} />},
     ...(data.error ? [{ animateClassName: '', component: <Error message={data.errorMessage} />}] : []),
-    { animateClassName: 'animate__animated animate__flipInX animate__delay-2s', component: <Weather data={data.wod} onLocationChange={onDataHookChange} />},
+    { animateClassName: 'animate__animated animate__flipInX animate__delay-2s', component: <Weather data={data.wod} unit={data.weatherUnit} onDataHookChange={onDataHookChange} />},
     { animateClassName: 'animate__animated animate__fadeInLeft animate__delay-3s', component: <News data={data.nod} limit={data.newsLimit} onLimitChange={onDataHookChange} />},
     { animateClassName: 'animate__animated animate__fadeInRight animate__delay-4s', component: <History data={data.hod} limit={data.historyLimit} onLimitChange={onDataHookChange} />},
     { animateClassName: 'animate__animated animate__fadeInLeftBig animate__delay-5s', component: <Quote data={data.qod} />},

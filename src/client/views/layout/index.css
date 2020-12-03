@@ -66,6 +66,10 @@ a:hover {
   font-size: 32px;
 }
 
+.today-web-heading-limit-form {
+  display: inline-block;
+}
+
 .today-web-heading-limit-input {
   
 }

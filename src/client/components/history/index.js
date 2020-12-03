@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Text from '../text'
 import Heading from '../heading'
 import LinkItem from '../link-item'
+import { FormControls } from '@universal-apps/swan-react'
 
 const HistoryItems = ({ items, title }) => {
 	return (
@@ -40,9 +41,9 @@ const History = ({ data, limit, onLimitChange }) => {
 							url={data.url} 
 						/>
 						&nbsp;&nbsp;
-						<input
+						<FormControls.NumericInput
+							formClassName='today-web-heading-limit-form'
 							className='today-web-heading-limit-input'
-							type='number' 
 							id='history-limit' 
 							name='history-limit' 
 							min='1' 

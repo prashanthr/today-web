@@ -2,15 +2,27 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Text from '../text'
 import { isEmpty } from 'lodash'
+import UnitSelector from './unit-selector'
+import Location from './location'
+import './index.css'
 
-const Weather = ({ data }) => {
+const Weather = ({ data, unit, onDataHookChange }) => {
 	const { weather, main, visibility, wind, name, sys } = data
 	return (
 		<>
 			{!isEmpty(data) && (
 				<>
 				<Text color='primary'>
-						Today's foecast (for <Text color='secondary'>{name}, {sys.country}</Text>)&nbsp;
+						Today's foecast (for&nbsp;
+								<Location 
+									location={`${name}, ${sys.country}`}
+									onChange={onDataHookChange}
+								/>
+							)&nbsp;
+							<UnitSelector
+								unit={unit}
+								onChange={onDataHookChange}
+							/>
 						<br />
 						<Text bold color='tertiary' className=''>
 							{weather[0].description}&nbsp;

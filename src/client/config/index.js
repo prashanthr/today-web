@@ -49,6 +49,6 @@ const prodConfig = {
   logErrorsToConsole: true
 }
 
-const config = isProd() ? prodConfig : defaultConfig
+const config = false ? prodConfig : defaultConfig
 
 export default config
