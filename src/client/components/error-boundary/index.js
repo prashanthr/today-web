@@ -1,4 +1,6 @@
 import React from 'react'
+import Layout from '../../views/layout'
+import { debug } from '../../util/debug'
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -16,17 +18,21 @@ class ErrorBoundary extends React.Component {
 
   componentDidCatch(error, errorInfo) {
     // You can also log the error to an error reporting service
-    // logErrorToMyService(error, errorInfo);
-    console.log('Error caught', error, errorInfo)
+    debug('Encountered a React error', error, errorInfo)
   }
 
   render() {
     if (this.state.hasError) {
-      // You can render any custom fallback UI
-      return <h1>Oops, something went wrong! :( </h1>;
+      return (
+        <Layout>
+          <h1 className='today-web-error-text'>
+            Oops, something went wrong! :(
+          </h1>
+        </Layout>
+      )
     }
 
-    return this.props.children; 
+    return this.props.children
   }
 }
 

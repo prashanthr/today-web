@@ -28,4 +28,9 @@ const UnitSelector = ({ unit, onChange }) => (
   </div>
 )
 
+UnitSelector.propTypes = {
+  unit: PropTypes.string,
+  onChange: PropTypes.func
+}
+
 export default UnitSelector

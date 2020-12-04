@@ -11,7 +11,6 @@ const App = () => {
   const onDataHookChange = ({ key, value }) => {
     switch (key) {
       default:
-        console.log('onDataHookChange', key, value)
         setEffectData({ 
           ...effectData,
           forceUpdate: true,

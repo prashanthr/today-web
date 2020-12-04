@@ -13,12 +13,12 @@ const Weather = ({ data, unit, onDataHookChange }) => {
 			{!isEmpty(data) && (
 				<>
 				<Text color='primary'>
-						Today's foecast (for&nbsp;
+						Today's forecast for&nbsp;
 								<Location 
 									location={`${name}, ${sys.country}`}
-									onChange={onDataHookChange}
+									onUpdate={onDataHookChange}
 								/>
-							)&nbsp;
+							&nbsp;
 							<UnitSelector
 								unit={unit}
 								onChange={onDataHookChange}
