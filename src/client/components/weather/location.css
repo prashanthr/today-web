@@ -1,0 +1,11 @@
+.weather-location {
+  display: inline-block;
+}
+
+.location-edit-tip {
+  font-size: small;
+}
+
+.location-edit input {
+  height: 20px;
+}

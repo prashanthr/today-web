@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Routes from './client/routes';
 import * as serviceWorker from './client/serviceWorker';
+import ErrorBoundary from './client/components/error-boundary'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Routes />
+    <ErrorBoundary>
+      <Routes />
+    </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')
 );

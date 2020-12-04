@@ -19,7 +19,7 @@ const LinkItem = ({ title, url, linkText }) => (
 )
 
 LinkItem.propTypes = {
-	title: PropTypes.oneOf([PropTypes.string, PropTypes.object]),
+	title: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.element]),
 	url: PropTypes.string,
 	linkText: PropTypes.string
 }

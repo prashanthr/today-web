@@ -2,12 +2,25 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Heading from '../heading'
 import LinkItem from '../link-item'
+import { FormControls } from '@universal-apps/swan-react'
 
-const News = ({ data }) => (
+const News = ({ data, limit, onLimitChange }) => (
 	<>
 		{data && data.articles && (
 			<>
-				<Heading text={`Today's Headlines`} />
+				<div>
+					<Heading text={`Today's Headlines`} />&nbsp;&nbsp;
+						<FormControls.NumericInput
+							formClassName='today-web-heading-limit-form'
+							className='today-web-heading-limit-input'
+							id='news-limit' 
+							name='news-limit' 
+							min='1'
+							max='100'
+							defaultValue={limit}
+							onBlur={e => onLimitChange({ key: 'newsLimit', value: e.target.value })}
+						/>
+				</div>
 				{data.articles.map((article, idx) => (
 					<LinkItem
 						key={idx}

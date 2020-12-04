@@ -60,8 +60,26 @@ a:hover {
   margin-right: 10%;
   text-align: center;
   font-size: 24px;
+  padding-top: 20px;
+}
+
+@media all and (min-width: 750px) {
+  .today-web-view-page  {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    font-size: 24px;
+  }
 }
 
 .today-web-view-tagline {
   font-size: 32px;
+}
+
+.today-web-heading-limit-form {
+  display: inline-block;
+}
+
+.today-web-heading-limit-input {
+  height: 20px; 
 }
