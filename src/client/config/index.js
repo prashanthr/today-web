@@ -7,6 +7,11 @@ const defaultConfig = {
   ipUrl: "https://ipinfo.io/json",
   coffeeUrl: "https://www.buymeacoffee.com/TGuwXOA",
   todayCliPkgUrl: "https://npmjs.org/package/@universal-apps/today",
+  analytics: {
+    google: {
+      propertyId: ''
+    }
+  },
   app: {
     cache: {
       ttl: 43200 // 12 hrs
