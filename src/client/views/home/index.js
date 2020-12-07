@@ -28,7 +28,7 @@ const Home = () => (
       </div>
       <br />
       <div className='today-web-view-home-support'>
-      <Text >Support this project by <Link href={config.coffeeUrl}>buying me a coffee</Link></Text>
+        <Text>Support this project by <Link href={config.coffeeUrl}>buying me a coffee</Link></Text>
       </div>
     </div>
   </Layout>
