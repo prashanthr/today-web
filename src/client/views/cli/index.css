@@ -4,7 +4,7 @@ code {
   font-family: monospace;
   font-size: 24px;
   line-height: 1.6;
-  margin-bottom: 1.6em;
+  margin-bottom: 1rem;
   max-width: 100%;
   overflow: auto;
   padding: 1em 1.5em;
@@ -19,8 +19,4 @@ code {
 .today-web-view-cli-img img {
   width: 80%;
   border: 2px solid var(--today-web-secondary-color);
-}
-
-.today-web-view-cli-img img:hover {
-  transform: scale(1.2);
 }
