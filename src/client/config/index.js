@@ -9,7 +9,7 @@ const defaultConfig = {
   todayCliPkgUrl: "https://npmjs.org/package/@universal-apps/today",
   analytics: {
     google: {
-      propertyId: 'G-ZGH4CQJZTN'
+      propertyId: 'UA-117106220-5' // 'G-ENN3CHFB4H'
     }
   },
   app: {
