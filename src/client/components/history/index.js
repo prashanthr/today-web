@@ -27,10 +27,12 @@ HistoryItems.propTypes = {
 	title: PropTypes.string
 }
 
+const isDataValid = (data) => data && (data.date !== null && data.url !== null)
+
 const History = ({ data, limit, onLimitChange }) => {
 	return (
 		<>
-			{data && (
+			{isDataValid(data) && (
 				<>
 					<div>
 						<LinkItem 
