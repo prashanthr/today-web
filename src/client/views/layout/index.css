@@ -83,3 +83,8 @@ a:hover {
 .today-web-heading-limit-input {
   height: 20px; 
 }
+
+.hint-tip {
+  font-size: small;
+  padding-left: 6px;
+}

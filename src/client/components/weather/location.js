@@ -68,7 +68,7 @@ const Location = ({ location, onUpdate }) => {
       <Text color='secondary'>
         {text}
       </Text>
-      <span className='location-edit-tip'>
+      <span className='hint-tip'>
         &nbsp;Click location to edit&nbsp;
       </span>
     </div>

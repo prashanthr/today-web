@@ -53,6 +53,9 @@ const History = ({ data, limit, onLimitChange }) => {
 							defaultValue={limit}
 							onBlur={e => onLimitChange({ key: 'historyLimit', value: e.target.value })}
 						/>
+						<span className='hint-tip'>
+							&nbsp;Update and click outside the box to see changes&nbsp;
+						</span>
 					</div>
 					<HistoryItems items={data.data.Events} title={'Events'} />
 					<br />

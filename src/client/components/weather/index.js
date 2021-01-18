@@ -9,7 +9,7 @@ import Table from '../table'
 import { Button } from '@universal-apps/swan-react'
 
 const WeatherTable = ({ data }) => {
-	const { weather, main, visibility, wind, name, sys } = data
+	const { weather, main, visibility, wind } = data
 	return (
 		<Table
 			showHeader={false}
@@ -41,7 +41,7 @@ const WeatherTable = ({ data }) => {
 }
 
 const WeatherText = ({ data }) => {
-	const { weather, main, visibility, wind, name, sys } = data
+	const { weather, main, visibility, wind } = data
 	return (
 		<>
 			<Text bold color='tertiary' className=''>
@@ -55,8 +55,9 @@ const WeatherText = ({ data }) => {
 }
 
 const Weather = ({ data, unit, onDataHookChange }) => {
-	const { weather, main, visibility, wind, name, sys } = data
-	const [isCondensedView, setCondensedView] = useState(false)
+	const { name, sys } = data
+	const isSmallDevice = window.screen.width < 600 // not that important to be dynamic
+	const [isCondensedView, setCondensedView] = useState(isSmallDevice ? false : true)
 	return (
 		<>
 			{!isEmpty(data) && (
