@@ -1,15 +1,15 @@
 .today-web-weather-view-btn {
-  display: inline-block;
+  display: inline-block !important;
   background-color: #e4e4e4;
   color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
   line-height: 1;
   text-align: center;
-  padding: 6px 12px;
+  padding: 8px 12px;
   margin-right: -1px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
   transition: all 0.1s ease-in-out;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   cursor: pointer;
 }
