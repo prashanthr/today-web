@@ -18,8 +18,12 @@ const News = ({ data, limit, onLimitChange }) => (
 							min='1'
 							max='100'
 							defaultValue={limit}
+							onKeyDown={e => e.preventDefault()}
 							onBlur={e => onLimitChange({ key: 'newsLimit', value: e.target.value })}
 						/>
+						<span className='hint-tip'>
+							&nbsp;Update and click outside the box to see changes&nbsp;
+						</span>
 				</div>
 				{data.articles.map((article, idx) => (
 					<LinkItem

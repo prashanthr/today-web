@@ -40,7 +40,7 @@ body {
   color: var(--today-web-link-color)
 }
 
-a, a:visited, a:-webkit-any-link {
+a, a:visited, a:hover, a:focus, a:active, a:-webkit-any-link {
   color: var(--today-web-link-color);
   text-decoration: none;
 }
@@ -82,4 +82,9 @@ a:hover {
 
 .today-web-heading-limit-input {
   height: 20px; 
+}
+
+.hint-tip {
+  font-size: small;
+  padding-left: 6px;
 }

@@ -1,0 +1,11 @@
+.today-web-table-wrap {
+
+}
+
+.today-web-table {
+
+}
+
+div.today-web-table-wrap > table > tbody > tr > td > span {
+  padding-left: 10px;
+}

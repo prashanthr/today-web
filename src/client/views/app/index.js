@@ -20,8 +20,10 @@ const App = () => {
   }
   return (
     <Layout>
-      <AppLayout data={appData} onDataHookChange={onDataHookChange}>
-      </AppLayout>
+      <AppLayout 
+        data={appData} 
+        onDataHookChange={onDataHookChange}
+      />
     </Layout>
   )
 }

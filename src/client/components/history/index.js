@@ -27,10 +27,12 @@ HistoryItems.propTypes = {
 	title: PropTypes.string
 }
 
+const isDataValid = (data) => data && (data.date !== null && data.url !== null)
+
 const History = ({ data, limit, onLimitChange }) => {
 	return (
 		<>
-			{data && (
+			{isDataValid(data) && (
 				<>
 					<div>
 						<LinkItem 
@@ -51,6 +53,9 @@ const History = ({ data, limit, onLimitChange }) => {
 							defaultValue={limit}
 							onBlur={e => onLimitChange({ key: 'historyLimit', value: e.target.value })}
 						/>
+						<span className='hint-tip'>
+							&nbsp;Update and click outside the box to see changes&nbsp;
+						</span>
 					</div>
 					<HistoryItems items={data.data.Events} title={'Events'} />
 					<br />
