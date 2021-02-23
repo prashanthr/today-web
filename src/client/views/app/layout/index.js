@@ -7,6 +7,7 @@ import News from '../../../components/news'
 import History from '../../../components/history'
 import Quote from '../../../components/quote'
 import Error from '../../../components/error'
+import Song from '../../../components/song'
 import './index.css'
 
 const AppLayout = ({ data, onDataHookChange, children }) => {
@@ -16,7 +17,8 @@ const AppLayout = ({ data, onDataHookChange, children }) => {
     { animateClassName: 'animate__animated animate__flipInX animate__delay-2s', component: <Weather data={data.wod} unit={data.weatherUnit} onDataHookChange={onDataHookChange} />},
     { animateClassName: 'animate__animated animate__fadeInLeft animate__delay-3s', component: <News data={data.nod} limit={data.newsLimit} onLimitChange={onDataHookChange} />},
     { animateClassName: 'animate__animated animate__fadeInRight animate__delay-4s', component: <History data={data.hod} limit={data.historyLimit} onLimitChange={onDataHookChange} />},
-    { animateClassName: 'animate__animated animate__fadeInLeftBig animate__delay-5s', component: <Quote data={data.qod} />},
+    { animateClassName: 'animate__animated animate__fadeInLeftBig animate__delay-4s', component: <Quote data={data.qod} />},
+    { animateClassName: 'animate__animated animate__fadeInLeft animate__delay-5s', component: <Song data={data.sod} />},
     { animateClassName: 'animate__animated animate__fadeInLeft animate__delay-5s', component: <Footer />}
   ]
   return (

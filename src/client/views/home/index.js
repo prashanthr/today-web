@@ -21,6 +21,7 @@ const Home = () => (
           <li className='animate__animated animate__fadeInLeft animate__delay-2s'>- Top headlines <Emoji symbol={'🗞'} alt='news' /></li>
           <li className='animate__animated animate__fadeInLeft animate__delay-3s'>- Historical notes <Emoji symbol={'🎓'} alt='mortarboard' /></li>
           <li className='animate__animated animate__fadeInLeft animate__delay-4s'>- Daily inspirational quote <Emoji symbol={'✨'} alt='spark' /></li>
+          <li className='animate__animated animate__fadeInLeft animate__delay-5s'>- Song of the day <Emoji symbol={'🎧'} alt='headphones' /></li>
         </ul>
       </div>
       <div className='today-web-view-home-access'>
