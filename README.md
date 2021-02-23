@@ -1,6 +1,6 @@
 # today-web - Web client for today
 
-![logo](./assets/logo-black.svg)
+![logo](./assets/logo-normal.svg)
 
 Welcome to today. A unique experience for the current day.
 
