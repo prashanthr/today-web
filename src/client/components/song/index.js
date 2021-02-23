@@ -19,7 +19,7 @@ const SpotifyWidget = ({ uri }) => (
 const UnrecognizedSource = ({ data }) => (
   <div className='today-song-of-day-unrecognized'>
     <Text color={'primary'}>
-        <Link href={data.uri} isInternal={false}>{data.track_name}</Link> - <Text color={'primary'}>{data.artist_name}</Text> - <Text color={'tertiary'}>{data.album_name}</Text>
+        <Link href={data.uri} isInternal={false}>{data.track_name}</Link> by <Text color={'primary'}>{data.artist_name}</Text> on <Text color={'tertiary'} className='today-song-of-day-source'>{data.source}</Text>
     </Text>
   </div>
 )
