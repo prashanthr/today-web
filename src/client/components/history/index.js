@@ -4,6 +4,7 @@ import Text from '../text'
 import Heading from '../heading'
 import LinkItem from '../link-item'
 import { FormControls } from '@universal-apps/swan-react'
+import { getValueInRange } from '../../util/range'
 
 const HistoryItems = ({ items, title }) => {
 	return (
@@ -29,7 +30,7 @@ HistoryItems.propTypes = {
 
 const isDataValid = (data) => data && (data.date !== null && data.url !== null)
 
-const History = ({ data, limit, onLimitChange }) => {
+const History = ({ data, limit, minLimit, maxLimit, onLimitChange }) => {
 	return (
 		<>
 			{isDataValid(data) && (
@@ -51,10 +52,22 @@ const History = ({ data, limit, onLimitChange }) => {
 							min='1' 
 							max='100'
 							defaultValue={limit}
-							onBlur={e => onLimitChange({ key: 'historyLimit', value: e.target.value })}
+							onKeyDown={e => {
+								if (e.keyCode === 13) {
+									e.preventDefault()
+								}
+							}}
+							onChange={e => onLimitChange({ 
+								key: 'historyLimit', 
+								value: getValueInRange({
+									min: minLimit,
+									max: maxLimit,
+									value: e.target.value
+								}) 
+							})}
 						/>
 						<span className='hint-tip'>
-							&nbsp;Update and click outside the box to see changes&nbsp;
+							&nbsp;Update to see changes&nbsp;
 						</span>
 					</div>
 					<HistoryItems items={data.data.Events} title={'Events'} />
