@@ -20,6 +20,12 @@ const defaultConfig = {
       weatherUnit: 'imperial',
       historyLimit: 3,
       newsLimit: 5
+    },
+    limits: {
+      historyMinLimit: 3,
+      historyMaxLimit: 100,
+      newsMinLimit: 5,
+      newsMaxLimit: 100
     }
   },
   author: {
