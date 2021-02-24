@@ -23,7 +23,7 @@ const defaultConfig = {
     },
     limits: {
       historyMinLimit: 3,
-      historyMaxLimit: 50,
+      historyMaxLimit: 100,
       newsMinLimit: 5,
       newsMaxLimit: 100
     }
