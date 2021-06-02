@@ -49,10 +49,10 @@ const defaultConfig = {
       type: 'History',
       url: 'https://github.com/muffinista/really-simple-history-api',
       name: 'MuffinLabs (Colin Mitchell)'
-    }, {
-      type: 'Song',
-      url: 'https://spotifycharts.com',
-      name: 'Spotify Charts'
+    // }, {
+    //   type: 'Song',
+    //   url: 'https://spotifycharts.com',
+    //   name: 'Spotify Charts'
     }]
   }
 }
